@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[28]"
+credits="Potatoes. For being awesome." #optional
+[[mods]] #mandatory
+modId="spudergy" #mandatory
+version="1.0" #mandatory
+displayName="Spudergy" #mandatory
+description='''
+Tater's are pretty neat.
+'''
