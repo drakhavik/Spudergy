@@ -23,7 +23,7 @@ public class SpudergyMod {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        logger.info("Setup method did a thing fucktard");
+
     }
 
     private void clientRegistries(final FMLClientSetupEvent even) {
