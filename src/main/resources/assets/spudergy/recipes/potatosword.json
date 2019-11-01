@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    " P ",
+    " S "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:potato"
+    },
+    "S": {
+      "item": "spudergy:potatostick"
+    }
+  },
+  "result": {
+    "item": "spudergy:potatosword"
+  }
+}
