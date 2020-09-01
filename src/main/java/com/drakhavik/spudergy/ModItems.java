@@ -1,5 +1,7 @@
 package com.drakhavik.spudergy;
 
+import com.drakhavik.spudergy.blocks.PootyFurnace;
+import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
@@ -34,7 +36,8 @@ public class ModItems {
 
         event.getRegistry().registerAll(
                 new Item(new Item.Properties()).setRegistryName(SpudergyMod.MOD_ID, "potatosword"),
-                potatoBlockItem
+                potatoBlockItem,
+                new com.drakhavik.spudergy.items.PootyFurnace(new com.drakhavik.spudergy.blocks.PootyFurnace())
         );
     }
 }
