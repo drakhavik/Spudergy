@@ -35,5 +35,4 @@ public class ModBlocks {
         //Make sure you always set the registry name.
         event.getRegistry().registerAll(POTATO_BLOCK);
     }
-
 }
