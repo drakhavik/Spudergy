@@ -30,5 +30,4 @@ public class ModItems {
                 new Item(new Item.Properties()).setRegistryName(SpudergyMod.MOD_ID, "potatosword")
         );
     }
-
 }
