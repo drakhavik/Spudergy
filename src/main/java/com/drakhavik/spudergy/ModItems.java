@@ -1,10 +1,13 @@
 package com.drakhavik.spudergy;
 
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
+
+import static com.drakhavik.spudergy.ModBlocks.POTATO_BLOCK;
 
 /**
  * This class has the register event handler for all custom items.
@@ -26,8 +29,12 @@ public class ModItems {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         //In here you pass in all item instances you want to register.
         //Make sure you always set the registry name.
+        BlockItem potatoBlockItem = new BlockItem(POTATO_BLOCK, new BlockItem.Properties());
+        potatoBlockItem.setRegistryName(POTATO_BLOCK.getRegistryName());
+
         event.getRegistry().registerAll(
-                new Item(new Item.Properties()).setRegistryName(SpudergyMod.MOD_ID, "potatosword")
+                new Item(new Item.Properties()).setRegistryName(SpudergyMod.MOD_ID, "potatosword"),
+                potatoBlockItem
         );
     }
 }
