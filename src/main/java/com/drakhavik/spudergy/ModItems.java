@@ -1,13 +1,13 @@
 package com.drakhavik.spudergy;
 
-import com.drakhavik.spudergy.blocks.PootyFurnace;
-import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
+
+import java.util.Optional;
 
 import static com.drakhavik.spudergy.ModBlocks.POTATO_BLOCK;
 
@@ -20,7 +20,7 @@ import static com.drakhavik.spudergy.ModBlocks.POTATO_BLOCK;
 @ObjectHolder(SpudergyMod.MOD_ID)
 public class ModItems {
 
-    public static final Item potato_sword = null;
+    public static final Item potatoSword = null;
 
     /**
      * The actual event handler that registers the custom items.
@@ -32,12 +32,12 @@ public class ModItems {
         //In here you pass in all item instances you want to register.
         //Make sure you always set the registry name.
         BlockItem potatoBlockItem = new BlockItem(POTATO_BLOCK, new BlockItem.Properties());
-        potatoBlockItem.setRegistryName(POTATO_BLOCK.getRegistryName());
+        Optional.ofNullable(POTATO_BLOCK.getRegistryName())
+                .map(potatoBlockItem::setRegistryName);
 
         event.getRegistry().registerAll(
                 new Item(new Item.Properties()).setRegistryName(SpudergyMod.MOD_ID, "potatosword"),
-                potatoBlockItem,
-                new com.drakhavik.spudergy.items.PootyFurnace(new com.drakhavik.spudergy.blocks.PootyFurnace())
+                potatoBlockItem
         );
     }
 }

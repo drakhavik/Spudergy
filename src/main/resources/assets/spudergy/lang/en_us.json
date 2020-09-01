@@ -1,4 +1,7 @@
 {
   "item.spudergy.potatosword.name": "Potato Sword",
-  "item.spudergy.potatostick.name": "Potato Stick"
+  "item.spudergy.potatostick.name": "Potato Stick",
+  "item.spudergy.potatofurnace": "Potato Furnace",
+  "block.spudergy.potatofurnace": "Potato Furnace",
+  "block.spudergy.potatoblock": "Potato Block"
 }
